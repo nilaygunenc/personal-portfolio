@@ -1,0 +1,81 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+/* ===== EDUCATION PAGE ===== */
+.education-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 3rem 2rem;
+}
+
+.education-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.education-header h1 {
+  font-size: 2.2rem;
+  font-weight: 600;
+}
+
+.education-header p {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  margin-top: 0.6rem;
+}
+
+/* TIMELINE */
+.education-timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 1.8rem;
+}
+
+.education-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-soft);
+  border-radius: 14px;
+  padding: 1.6rem 2rem;
+  position: relative;
+}
+
+.edu-year {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  display: block;
+  margin-bottom: 0.4rem;
+}
+
+.education-card h3 {
+  font-size: 1.15rem;
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+}
+
+.education-card p {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+}
